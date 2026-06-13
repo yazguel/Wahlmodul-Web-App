@@ -1,0 +1,200 @@
+/* Grundlayout für alle Seiten */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eeeeee;
+  color: #111;
+}
+
+/* Header oben */
+.header {
+  width: 1046px;
+  margin: 28px auto 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo + Titel nebeneinander */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.brand h2 {
+  margin: 40px 0 0 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* Icons rechts */
+.icons {
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Inhalt mittig */
+.wrapper {
+  width: 1046px;
+  margin: 0 auto;
+}
+
+/* Seitentitel */
+.title-box {
+  background: white;
+  height: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title-box h1 {
+  font-size: 30px;
+}
+
+/* Schritt-Navigation */
+.steps {
+  background: white;
+  height: 80px;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.step {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 12px 32px;
+  border-radius: 28px;
+}
+
+.step.active {
+  background: #e2001a;
+  color: white;
+}
+
+.steps span {
+  font-size: 30px;
+}
+
+/* Hauptkarte */
+.content-card {
+  background: white;
+  padding: 34px;
+  margin-bottom: 60px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Buttons oben */
+.top-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+/* Graue Überschriften-Balken */
+.section-title {
+  background: #d9d9d9;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 18px;
+  margin: 20px 0 14px;
+}
+
+/* Formularelemente */
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #bfc5cc;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-family: inherit;
+}
+
+.input,
+select {
+  height: 34px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+small {
+  display: block;
+  font-size: 11px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Buttons */
+.save {
+  background: #e2001a;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.secondary {
+  background: #ddd;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+}
+
+.next-button {
+  background: #8c8c8c;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-weight: bold;
+}
+
+.bottom-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}

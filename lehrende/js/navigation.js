@@ -5,3 +5,8 @@ function selectOption(card) {
 
   card.classList.add("selected");
 }
+
+// Wechselt zu einer anderen HTML-Seite
+function goToPage(page) {
+  window.location.href = page;
+}

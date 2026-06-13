@@ -1,0 +1,17 @@
+/* Extra-Abstände nur für die Beschreibung-Seite */
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 20px;
+}
+
+.large-textarea {
+  min-height: 160px;
+}
+
+/* Damit man auf langen Formularseiten scrollen kann */
+body {
+  overflow-y: auto;
+}
