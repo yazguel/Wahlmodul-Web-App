@@ -1,0 +1,84 @@
+/* Ganze WPM-Blöcke */
+.wpm-section {
+  margin-bottom: 28px;
+}
+
+/* Jahreszeile 2018/2025 */
+.year-header {
+  cursor: pointer;
+  padding: 12px 0;
+}
+
+/* Jahr + Pfeil nebeneinander */
+.year-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Jahr fett */
+.year-left span {
+  font-weight: bold;
+}
+
+/* Pfeil-Icon */
+.arrow {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+/* Gedrehter Pfeil beim Öffnen */
+.arrow.open {
+  transform: rotate(90deg);
+}
+
+/* Inhalt unter 2018/2025 */
+.year-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 30px;
+  padding: 10px 0 20px 40px;
+}
+
+/* Eingeklappter Zustand */
+.hidden {
+  display: none;
+}
+
+/* MMI, BTB, DAISY ohne Jahresstruktur */
+.mmi-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 30px;
+  padding: 20px 0 20px 40px;
+}
+
+/* Checkboxen sauber ausrichten */
+.year-content label,
+.mmi-content label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Checkbox-Mauszeiger */
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* Gruppe für "Projektmodul mit 5 CP / 10 CP" */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Unteroptionen innerhalb der Gruppe */
+.group-options {
+  display: flex;
+  gap: 16px;
+  margin-left: 8px;
+}

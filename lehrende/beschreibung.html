@@ -1,3 +1,4 @@
+<!-- 2.Seite -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -25,9 +26,9 @@
     </div>
 
     <div class="icons">
-      <img src="../assets/lehrende/search.png" alt="Suche" class="icon">
-      <img src="../assets/lehrende/user.png" alt="Profil" class="icon">
-      <img src="../assets/lehrende/settings.png" alt="Einstellungen" class="icon">
+      <img src="../assets/lehrende/Search.svg" alt="Suche" class="icon">
+      <img src="../assets/lehrende/User.svg" alt="Profil" class="icon">
+      <img src="../assets/lehrende/Settings.svg" alt="Einstellungen" class="icon">
     </div>
   </header>
 
@@ -73,9 +74,9 @@
 
       <label for="zeugnistitel">Zeugnistitel</label>
       <input id="zeugnistitel" class="input" type="text">
-
+     
       <div class="two-columns">
-        <div>
+        <div> <br>
           <label for="pruefer">Prüfer*in</label>
           <select id="pruefer">
             <option>Prof. Dr.-Ing. M.Sc. Markus Dahm</option>
@@ -83,10 +84,11 @@
           </select>
         </div>
 
-        <div>
+        <div> <br>
           <label for="betreuer">Weitere Betreuer*innen oder Teams</label>
           <input id="betreuer" class="input" type="text">
-          <small>Bitte nur eintragen, wenn die gewünschte Person nicht in der Liste angezeigt wird.</small>
+          <small>Bitte nur eintragen, wenn die gewünschte Person nicht in der Liste angezeigt wird.
+            <br> Bei mehrereren Namen bitte mit Komma voneinander trennen.</small>
         </div>
       </div>
 
@@ -97,7 +99,7 @@
         <div>
           <label for="bild">Bild auswählen</label>
           <input id="bild" class="input" type="file">
-          <small>Erlaubt sind PNG, JPEG, GIF und WebP.</small>
+          <small>Erlaubt sind PNG, JPEG, GIF und WebP. Das Bild wird zu 300x200px skaliert dargestellt.</small>
         </div>
 
         <div>
@@ -111,9 +113,10 @@
       <div class="section-title">Beschreibungen</div>
 
       <label for="kurz">Kurz-Beschreibung</label>
+      <small>Wird in der Angebotsansicht immer angezeigt</small> <br>
       <textarea id="kurz" placeholder="Rich text editor."></textarea>
-
       <label for="lang">Lang-Beschreibung</label>
+      <small>Wird in der Angebotsansicht nach dem Ausklappen angezeigt</small> <br>
       <textarea id="lang" class="large-textarea" placeholder="Rich text editor."></textarea>
 
       <!-- Buttons unten -->

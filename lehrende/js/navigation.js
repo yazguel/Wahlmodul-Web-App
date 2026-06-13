@@ -10,3 +10,15 @@ function selectOption(card) {
 function goToPage(page) {
   window.location.href = page;
 }
+
+// wpm pfeil runterklappen
+function toggleYear(id) {
+  const content = document.getElementById(id);
+  const arrow = document.getElementById("arrow-" + id);
+  content.classList.toggle("hidden");
+  arrow.classList.toggle("open");
+}
+
+function goToPage(page) {
+  window.location.href = page;
+}
