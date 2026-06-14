@@ -1,0 +1,163 @@
+<!-- 4. Seite: Organisation -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organisation</title>
+
+  <!-- Gemeinsames CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Eigenes CSS für Organisation -->
+  <link rel="stylesheet" href="css/orga.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <img src="../assets/logo/Hochschule_Düsseldorf_logo.png" alt="HSD Logo" class="logo">
+
+      <h2>
+        Wahlpflichtmodule<br>
+        Anbieter Hub
+      </h2>
+    </div>
+
+    <div class="icons">
+      <img src="../assets/lehrende/Search.svg" alt="Suche" class="icon">
+      <img src="../assets/lehrende/User.svg" alt="Profil" class="icon">
+      <img src="../assets/lehrende/Settings.svg" alt="Einstellungen" class="icon">
+    </div>
+  </header>
+
+  <main class="wrapper">
+
+    <!-- TITEL -->
+    <section class="title-box">
+      <h1>Organisation</h1>
+    </section>
+
+    <!-- SCHRITTE -->
+    <nav class="steps">
+      <button class="step" onclick="goToPage('zuordnung.html')">Zuordnung</button>
+      <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
+      <button class="step" onclick="goToPage('beschreibung.html')">Beschreibung</button>
+      <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
+      <button class="step" onclick="goToPage('wpm.html')">Wahlpflichtmodule</button>
+      <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
+      <button class="step active">Organisation</button>
+      <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
+      <button class="step" onclick="goToPage('vorschau.html')">Vorschau</button>
+    </nav>
+
+    <!-- WEISSER INHALTSBEREICH -->
+    <section class="content-card">
+
+      <!-- Buttons oben rechts -->
+      <div class="top-actions">
+        <button class="secondary" onclick="goToPage('vorschau.html')">Vorschau</button>
+        <button class="save">Änderungen speichern</button>
+      </div>
+
+      <!-- SEMESTER -->
+      <div class="section-title">Zuordnung zu einem Semester</div>
+
+      <div class="radio-list">
+        <label><input type="radio" name="semester" checked> Nur WiSe 2026 / 2027 (nächstes Semester)</label>
+        <label><input type="radio" name="semester"> Nur SoSe 2026 (dieses Semester)</label>
+        <label><input type="radio" name="semester"> Jedes Semester</label>
+        <label><input type="radio" name="semester"> Jedes WiSe</label>
+        <label><input type="radio" name="semester"> Jedes SoSe</label>
+        <label><input type="radio" name="semester"> Wird (vorübergehend oder noch) nicht angeboten</label>
+      </div>
+
+      <!-- ORGANISATION -->
+      <div class="section-title">Organisation</div>
+
+      <div class="three-columns">
+        <div>
+          <label for="termine">Termine</label>
+          <input id="termine" class="input" type="text">
+        </div>
+
+        <div>
+          <label for="erstes-treffen">Erstes Treffen</label>
+          <input id="erstes-treffen" class="input" type="date">
+        </div>
+
+        <div>
+          <label for="ort">Ort</label>
+          <input id="ort" class="input" type="text">
+        </div>
+      </div>
+
+      <div class="two-columns">
+        <div>
+          <label for="pruefungsform">Prüfungsform</label>
+          <select id="pruefungsform">
+            <option>Klausur</option>
+            <option>Projektarbeit</option>
+            <option>Hausarbeit</option>
+            <option>Mündliche Prüfung</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="anmerkungen">Anmerkungen</label>
+          <input id="anmerkungen" class="input" type="text">
+        </div>
+      </div>
+
+      <div class="checkbox-line">
+        <span>Plätze:</span>
+        <label><input type="checkbox" checked> Keine Beschränkung</label>
+      </div>
+
+      <!-- VORAUSSETZUNGEN -->
+      <div class="section-title">Voraussetzungen</div>
+
+      <div class="radio-list">
+        <label><input type="radio" name="voraussetzung" checked> Keine Voraussetzung</label>
+        <label><input type="radio" name="voraussetzung"> Voraussetzungen</label>
+      </div>
+
+      <input class="input full-input" type="text">
+
+      <!-- BEWERBUNG -->
+      <div class="section-title">Bewerbungsmodalitäten</div>
+
+      <div class="radio-list">
+        <label><input type="radio" name="bewerbung"> Allen Interessent*innen automatisch zusagen</label>
+
+        <label><input type="radio" name="bewerbung" checked> Es ist eine Bewerbung notwendig</label>
+
+        <div class="sub-options">
+          <label><input type="checkbox" checked> Ich erwarte ein Motivationsschreiben</label>
+          <label><input type="checkbox" checked> Es kann ein Gruppenwunsch angegeben werden</label>
+        </div>
+
+        <label>
+          <input type="checkbox" checked>
+          Den folgenden Bedingungen zur Durchführung des Kurses (AGB) muss zugestimmt werden
+        </label>
+      </div>
+
+      <input class="input full-input" type="text">
+
+      <!-- Buttons unten -->
+      <div class="bottom-actions">
+        <button class="secondary" onclick="goToPage('wpm.html')">Zurück</button>
+        <button class="save">Änderungen speichern</button>
+        <button class="next-button" onclick="goToPage('vorschau.html')">Weiter</button>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Gemeinsames JavaScript -->
+  <script src="js/navigation.js"></script>
+</body>
+</html>
