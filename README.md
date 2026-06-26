@@ -43,5 +43,3 @@ Lehrende werden bei der Erstellung von Angeboten unterstützt.
 ## Screenshots
 
 (Bilder einfügen)
-
-Test 123
