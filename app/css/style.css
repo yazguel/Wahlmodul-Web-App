@@ -1,0 +1,172 @@
+/* Grundlayout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 28px;
+}
+
+.icon {
+    height: 24px;
+    margin-left: 12px;
+}
+
+/* Progress Bar */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.progress-step {
+    width: 28px;
+    height: 6px;
+    background: #ddd;
+    border-radius: 4px;
+    margin: 0 4px;
+}
+
+.progress-step.active {
+    background: #c00;
+}
+
+/* Title */
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-title h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.page-title p {
+    margin: 4px 0 0;
+    color: #666;
+}
+
+/* Course List */
+.course-list {
+    padding: 0 16px;
+}
+
+/* Course Card */
+.course-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px; /* WICHTIG: Abstand zwischen Kursen */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    overflow: visible; /* WICHTIG: verhindert Abschneiden */
+}
+
+.course-card h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.course-card p {
+    margin: 0 0 12px;
+    color: #666;
+}
+
+/* Filter */
+.tag-filter {
+    display: flex;
+    gap: 12px;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.tag-filter label {
+    background: #eee;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Course Image */
+.course-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Tags */
+.tags span {
+    background: #eee;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-right: 6px;
+    font-size: 12px;
+}
+
+/* Dropdown */
+.dropdown {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    padding: 0;
+}
+
+.dropdown.open .dropdown-content {
+    max-height: 2000px; /* genug Platz für lange Texte */
+    margin-top: 12px;
+    padding-bottom: 20px; /* WICHTIG: Platz für Bewerben-Button */
+}
+
+/* Langer Beschreibungstext */
+.beschreibung-lang {
+    margin-bottom: 16px;
+    line-height: 1.45;
+    font-size: 14px;
+    color: #333;
+    white-space: normal;
+}
+
+/* Bewerben Button */
+.apply-btn {
+    width: 100%;
+    padding: 12px;
+    background: #c00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 16px; /* Abstand zum Text */
+}
+
+/* Zurück Button */
+.back-btn {
+    width: calc(100% - 32px);
+    margin: 20px 16px;
+    padding: 12px;
+    background: #ddd;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}

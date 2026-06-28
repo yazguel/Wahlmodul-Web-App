@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulauswahl</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Top Navigation -->
+    <header class="topbar">
+        <img src="../assets/icons/Hochschule_Düsseldorf_logo.png" class="logo">
+
+        <div class="top-icons">
+            <img src="../assets/icons/Search.svg" class="icon">
+            <img src="../assets/icons/User.svg" class="icon">
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-step"></div>
+        <div class="progress-step active"></div>
+        <div class="progress-step"></div>
+    </div>
+
+    <!-- Title -->
+    <section class="page-title">
+        <h1 id="modul-title"></h1>
+        <p>Modulauswahl</p>
+    </section>
+
+    <!-- Filter -->
+    <div class="tag-filter">
+        <label><input type="checkbox" value="Projekt"> Projekt</label>
+        <label><input type="checkbox" value="Klausur"> Klausur</label>
+        <label><input type="checkbox" value="Portfolio"> Portfolio</label>
+        <label><input type="checkbox" value="SoSe"> SoSe</label>
+        <label><input type="checkbox" value="WiSe"> WiSe</label>
+        <label><input type="checkbox" value="Wahlkatalog 1"> Wahlkatalog 1</label>
+        <label><input type="checkbox" value="Wahlkatalog 2"> Wahlkatalog 2</label>
+        <label><input type="checkbox" value="IP1"> IP1</label>
+        <label><input type="checkbox" value="IP2"> IP2</label>
+        <label><input type="checkbox" value="MP1"> MP1</label>
+        <label><input type="checkbox" value="MP2"> MP2</label>
+        <label><input type="checkbox" value="Vert. A"> Vert. A</label>
+        <label><input type="checkbox" value="Vert. B"> Vert. B</label>
+        <label><input type="checkbox" value="Vert. C"> Vert. C</label>
+    </div>
+
+    <!-- Course List (MUSS LEER SEIN!) -->
+    <section class="course-list"></section>
+
+    <!-- Zurück Button -->
+    <button class="back-btn" onclick="goTo('home.html')">← Zurück</button>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/dropdown.js"></script>
+    <script src="../js/kursdaten.js"></script>
+    <script src="../js/modulwahl.js"></script>
+
+</body>
+</html>
