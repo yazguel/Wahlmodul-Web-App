@@ -24,7 +24,7 @@ function renderKurse() {
             // Prüfen, ob Kurs mindestens einen ausgewählten Tag hat
             return kurs.tags.some(tag => checkedTags.includes(tag));
         })
-        .forEach(kurs => {
+        .forEach((kurs, kursIndex) => {
             const card = document.createElement("div");
             card.classList.add("course-card", "dropdown");
             card.onclick = () => toggleDropdown(card);
@@ -43,9 +43,11 @@ function renderKurse() {
                         ${kurs.beschreibungLang.replace(/\n/g, "<br>")}
                     </div>
 
-                    <button class="apply-btn" onclick="event.stopPropagation(); goTo('bewerben.html')">
+                    <button class="apply-btn" onclick="event.stopPropagation(); goTo('bewerben.html?modul=${modul}&kurs=${kursIndex}')">
                         Bewerben
                     </button>
+
+
                 </div>      
             `;
 

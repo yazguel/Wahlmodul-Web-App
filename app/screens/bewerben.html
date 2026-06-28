@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewerben</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <img src="../assets/icons/Hochschule_Düsseldorf_logo.png" class="logo">
+        <div class="top-icons">
+            <img src="../assets/icons/Search.svg" class="icon">
+            <img src="../assets/icons/User.svg" class="icon">
+        </div>
+    </header>
+
+    <!-- Progress -->
+    <div class="progress-container">
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step active"></div>
+    </div>
+
+    <!-- Titel -->
+    <section class="page-title">
+        <h1 id="kurs-title"></h1>
+        <p>Bewerben</p>
+    </section>
+
+    <!-- Motivationsschreiben -->
+    <section class="bewerbung-container">
+        <label>Motivationsschreiben</label>
+        <textarea id="motivation" placeholder="Warum möchten Sie diesen Kurs belegen?"></textarea>
+
+        <div class="bewerbung-buttons">
+            <button class="cancel-btn" onclick="openCancelPopup()">Abbrechen</button>
+            <button class="finish-btn" onclick="finishApplication()">Fertig</button>
+        </div>
+    </section>
+
+    <!-- Popup -->
+    <div id="cancel-popup" class="popup hidden">
+        <div class="popup-box">
+            <p>Wirklich abbrechen?</p>
+            <div class="popup-buttons">
+                <button onclick="cancelYes()">Ja</button>
+                <button onclick="cancelNo()">Nein</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/kursdaten.js"></script>
+    <script src="../js/bewerben.js"></script>
+
+</body>
+</html>

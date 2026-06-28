@@ -135,9 +135,9 @@ body {
 }
 
 .dropdown.open .dropdown-content {
-    max-height: 2000px; /* genug Platz für lange Texte */
+    max-height: 2000px; /* Platz für lange Texte */
     margin-top: 12px;
-    padding-bottom: 20px; /* WICHTIG: Platz für Bewerben-Button */
+    padding-bottom: 20px; /* Platz für Bewerben-Button */
 }
 
 /* Langer Beschreibungstext */
@@ -169,4 +169,88 @@ body {
     border: none;
     border-radius: 8px;
     font-size: 16px;
+}
+.bewerbung-container {
+    padding: 0 16px;
+}
+
+.bewerbung-container textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 14px;
+}
+
+.bewerbung-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.cancel-btn, .finish-btn {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.cancel-btn {
+    background: #ddd;
+}
+
+.finish-btn {
+    background: #c00;
+    color: white;
+}
+
+/* Popup */
+.popup.hidden {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    text-align: center;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.popup-buttons button {
+    width: 45%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.popup-buttons button:first-child {
+    background: #c00;
+    color: white;
+}
+
+.popup-buttons button:last-child {
+    background: #ddd;
 }
