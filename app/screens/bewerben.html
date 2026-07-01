@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,21 +27,26 @@
     </div>
 
     <!-- Titel -->
-    <section class="page-title">
-        <h1 id="kurs-title"></h1>
-        <p>Bewerben</p>
+    <section class="bewerben-header">
+        <h1 id="modul-title"></h1>
+        <h2 id="kurs-title"></h2>
     </section>
+
 
     <!-- Motivationsschreiben -->
     <section class="bewerbung-container">
-        <label>Motivationsschreiben</label>
-        <textarea id="motivation" placeholder="Warum möchten Sie diesen Kurs belegen?"></textarea>
+    <label class="motivation-label">Motivationsschreiben</label>
 
-        <div class="bewerbung-buttons">
-            <button class="cancel-btn" onclick="openCancelPopup()">Abbrechen</button>
-            <button class="finish-btn" onclick="finishApplication()">Fertig</button>
-        </div>
-    </section>
+    <textarea id="motivation" class="motivation-box"
+        placeholder="Warum möchten Sie diesen Kurs belegen?"></textarea>
+
+    <div class="bewerbung-buttons">
+        <!-- <button class="autosave-btn">Autosave</button> -->
+        <button class="cancel-btn" onclick="openCancelPopup()">Abbrechen</button>
+        <button class="finish-btn" onclick="finishApplication()">Fertig</button>
+    </div>
+</section>
+
 
     <!-- Popup -->
     <div id="cancel-popup" class="popup hidden">
@@ -57,4 +63,5 @@
     <script src="../js/bewerben.js"></script>
 
 </body>
+
 </html>

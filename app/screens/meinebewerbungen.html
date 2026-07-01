@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Bewerbungen</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <img src="../assets/icons/Hochschule_Düsseldorf_logo.png" class="logo">
+        <div class="top-icons">
+            <img src="../assets/icons/Search.svg" class="icon">
+            <img src="../assets/icons/User.svg" class="icon">
+        </div>
+    </header>
+
+    <section class="page-title">
+        <h1>Meine Bewerbungen</h1>
+        <p>Bewerbungsstatus</p>
+    </section>
+
+    <div class="bewerbung-kategorien">
+
+        <div class="bewerbung-kategorie" data-modul="ip">
+            <h2>Informatikprojekt 1/2</h2>
+            <div class="bewerbung-liste"></div>
+        </div>
+
+        <div class="bewerbung-kategorie" data-modul="mp">
+            <h2>Medienprojekt A/B</h2>
+            <div class="bewerbung-liste"></div>
+        </div>
+
+        <div class="bewerbung-kategorie" data-modul="va">
+            <h2>Vertiefung A/C</h2>
+            <div class="bewerbung-liste"></div>
+        </div>
+
+        <div class="bewerbung-kategorie" data-modul="vb">
+            <h2>Vertiefung B/C</h2>
+            <div class="bewerbung-liste"></div>
+        </div>
+
+    </div>
+
+    <div class="bewerbung-footer">
+        <button class="save-btn">Speichern</button>
+        <button class="back-btn-modul" onclick="goTo('home.html')">Zu den Modulen</button>
+
+    </div>
+
+    <script src="../js/meinebewerbungen.js"></script>
+
+</body>
+
+</html>

@@ -5,6 +5,26 @@ body {
     background: #f7f7f7;
 }
 
+/* Buttons Home */
+.start-btn {
+    width: 100%;
+    padding: 14px;
+    background: #c00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: background 0.2s ease;
+}
+.start-btn:hover {
+    background: #a00;
+}
+
 /* Topbar */
 .topbar {
     display: flex;
@@ -14,11 +34,9 @@ body {
     background: white;
     border-bottom: 1px solid #ddd;
 }
-
 .logo {
     height: 28px;
 }
-
 .icon {
     height: 24px;
     margin-left: 12px;
@@ -30,7 +48,6 @@ body {
     justify-content: center;
     margin: 16px 0;
 }
-
 .progress-step {
     width: 28px;
     height: 6px;
@@ -38,7 +55,6 @@ body {
     border-radius: 4px;
     margin: 0 4px;
 }
-
 .progress-step.active {
     background: #c00;
 }
@@ -48,12 +64,10 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
-
 .page-title h1 {
     margin: 0;
     font-size: 20px;
 }
-
 .page-title p {
     margin: 4px 0 0;
     color: #666;
@@ -69,38 +83,57 @@ body {
     background: white;
     padding: 16px;
     border-radius: 12px;
-    margin-bottom: 20px; /* WICHTIG: Abstand zwischen Kursen */
+    margin-bottom: 20px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    overflow: visible; /* WICHTIG: verhindert Abschneiden */
+    overflow: visible;
 }
-
 .course-card h2 {
     margin: 0 0 6px;
     font-size: 18px;
 }
-
 .course-card p {
     margin: 0 0 12px;
     color: #666;
 }
 
-/* Filter */
-.tag-filter {
+/* Filter Chips */
+.tag-chips {
     display: flex;
-    gap: 12px;
-    padding: 0 16px;
-    margin-bottom: 16px;
     flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 16px;
+    margin-bottom: 12px;
+}
+.tag-chips span {
+    padding: 4px 10px;
+    background: #e5e5e5;
+    border-radius: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+}
+.tag-chips span.active {
+    background: #c00;
+    color: white;
 }
 
-.tag-filter label {
-    background: #eee;
-    padding: 6px 10px;
-    border-radius: 8px;
-    font-size: 14px;
+/* Tags in Kurskarten */
+.tags {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 6px;
+    margin-bottom: 10px;
+}
+.tags span {
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 14px;
+    font-size: 13px;
+    color: #444;
+    user-select: none;
+    display: inline-block;
+    line-height: 1;
 }
 
 /* Course Image */
@@ -112,35 +145,24 @@ body {
     margin-bottom: 12px;
 }
 
-/* Tags */
-.tags span {
-    background: #eee;
-    padding: 4px 8px;
-    border-radius: 6px;
-    margin-right: 6px;
-    font-size: 12px;
-}
-
 /* Dropdown */
 .dropdown {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .dropdown-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
     padding: 0;
 }
-
 .dropdown.open .dropdown-content {
-    max-height: 2000px; /* Platz für lange Texte */
+    max-height: 2000px;
     margin-top: 12px;
-    padding-bottom: 20px; /* Platz für Bewerben-Button */
+    padding-bottom: 20px;
 }
 
-/* Langer Beschreibungstext */
+/* Beschreibung */
 .beschreibung-lang {
     margin-bottom: 16px;
     line-height: 1.45;
@@ -157,10 +179,10 @@ body {
     color: white;
     border: none;
     border-radius: 8px;
-    margin-top: 16px; /* Abstand zum Text */
+    margin-top: 16px;
 }
 
-/* Zurück Button */
+/* Zurück Button (Modulauswahl) */
 .back-btn {
     width: calc(100% - 32px);
     margin: 20px 16px;
@@ -170,48 +192,82 @@ body {
     border-radius: 8px;
     font-size: 16px;
 }
+
+/* Bewerbungscreen */
+.bewerben-header {
+    text-align: center;
+    margin: 20px 0;
+}
+.bewerben-header h1 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: bold;
+}
+.bewerben-header h2 {
+    font-size: 18px;
+    margin: 6px 0 0;
+    color: #444;
+}
+
+/* Motivationsschreiben */
 .bewerbung-container {
     padding: 0 16px;
 }
-
-.bewerbung-container textarea {
+.motivation-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+.motivation-box {
     width: 100%;
     height: 200px;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #ccc;
-    resize: none;
+    background: #fafafa;
     font-size: 14px;
+    resize: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* Bewerbungsbuttons */
 .bewerbung-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
+    gap: 10px;
 }
-
-.cancel-btn, .finish-btn {
-    width: 48%;
-    padding: 12px;
+.autosave-btn {
+    flex: 1;
+    background: #eee;
     border: none;
+    padding: 12px;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 14px;
 }
-
 .cancel-btn {
+    flex: 1;
     background: #ddd;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
 }
-
 .finish-btn {
+    flex: 1;
     background: #c00;
     color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
 }
 
 /* Popup */
 .popup.hidden {
     display: none;
 }
-
 .popup {
     position: fixed;
     top: 0;
@@ -223,7 +279,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .popup-box {
     background: white;
     padding: 20px;
@@ -231,13 +286,11 @@ body {
     width: 80%;
     text-align: center;
 }
-
 .popup-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
 }
-
 .popup-buttons button {
     width: 45%;
     padding: 10px;
@@ -245,12 +298,109 @@ body {
     border-radius: 8px;
     font-size: 16px;
 }
-
 .popup-buttons button:first-child {
     background: #c00;
     color: white;
 }
-
 .popup-buttons button:last-child {
     background: #ddd;
+}
+
+/* Meine Bewerbungen */
+.bewerbung-kategorien {
+    padding: 0 16px;
+}
+
+/* Kategorie-Box */
+.bewerbung-kategorie {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+/* verhindert Klick-Block durch h2 */
+.bewerbung-kategorie h2 {
+    margin: 0 0 12px;
+    color: #c00;
+    pointer-events: none;
+}
+
+/* Liste geschlossen */
+.bewerbung-kategorie .bewerbung-liste {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    display: block; /* WICHTIG */
+}
+
+/* Liste geöffnet */
+.bewerbung-kategorie.open .bewerbung-liste {
+    max-height: 1000px;
+    margin-top: 12px;
+}
+
+/* Bewerbungsitems */
+.bewerbung-item {
+    background: #f7f7f7;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+}
+.bewerbung-item span {
+    font-size: 15px;
+}
+
+/* Buttons in Bewerbungen */
+.bewerbung-actions button {
+    margin-left: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+    pointer-events: auto;
+}
+.bewerbung-actions .edit-btn {
+    background: #ddd;
+}
+.bewerbung-actions .delete-btn {
+    background: #c00;
+    color: white;
+}
+
+/* Footer Buttons */
+.bewerbung-footer {
+    padding: 16px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Speichern */
+.save-btn {
+    flex: 1;
+    background: white;
+    border: 2px solid #c00;
+    color: #c00;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Zu den Modulen */
+.back-btn {
+    flex: 1;
+    background: #c00;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }

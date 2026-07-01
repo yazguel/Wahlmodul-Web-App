@@ -8,23 +8,36 @@ document.getElementById("modul-title").textContent = kursDaten[modul].titel;
 // Kursliste-Container
 const list = document.querySelector(".course-list");
 
-// Funktion zum Rendern der Kurse
+// CHIP-FILTER statt Checkboxen
+const chipContainer = document.querySelector(".tag-chips");
+
+// Chips klickbar machen
+chipContainer.querySelectorAll("span").forEach(chip => {
+    chip.addEventListener("click", () => {
+        chip.classList.toggle("active");
+        renderKurse();
+    });
+});
+
+// Ausgewählte Tags holen
+function getSelectedTags() {
+    return [...chipContainer.querySelectorAll(".active")]
+        .map(chip => chip.dataset.tag);
+}
+
+// Kurse rendern
 function renderKurse() {
     list.innerHTML = ""; // Liste leeren
 
-    // Ausgewählte Tags sammeln
-    const checkedTags = [...document.querySelectorAll(".tag-filter input:checked")]
-        .map(cb => cb.value);
+    const checkedTags = getSelectedTags();
 
     kursDaten[modul].kurse
         .filter(kurs => {
-            // Wenn keine Tags ausgewählt → alles anzeigen
             if (checkedTags.length === 0) return true;
-
-            // Prüfen, ob Kurs mindestens einen ausgewählten Tag hat
             return kurs.tags.some(tag => checkedTags.includes(tag));
         })
         .forEach((kurs, kursIndex) => {
+
             const card = document.createElement("div");
             card.classList.add("course-card", "dropdown");
             card.onclick = () => toggleDropdown(card);
@@ -43,12 +56,11 @@ function renderKurse() {
                         ${kurs.beschreibungLang.replace(/\n/g, "<br>")}
                     </div>
 
-                    <button class="apply-btn" onclick="event.stopPropagation(); goTo('bewerben.html?modul=${modul}&kurs=${kursIndex}')">
+                    <button class="apply-btn"
+                        onclick="event.stopPropagation(); goTo('bewerben.html?modul=${modul}&kurs=${kursIndex}')">
                         Bewerben
                     </button>
-
-
-                </div>      
+                </div>
             `;
 
             list.appendChild(card);
@@ -57,8 +69,3 @@ function renderKurse() {
 
 // Beim Laden direkt rendern
 renderKurse();
-
-// Event Listener für Tag-Filter
-document.querySelectorAll(".tag-filter input").forEach(cb => {
-    cb.addEventListener("change", renderKurse);
-});

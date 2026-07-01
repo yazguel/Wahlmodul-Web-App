@@ -8,7 +8,8 @@ const kurs = kursDaten[modul].kurse[kursIndex];
 const kursTitel = kurs.name;
 
 // Titel setzen
-document.getElementById("kurs-title").textContent = `${modulTitel} – ${kursTitel}`;
+document.getElementById("modul-title").textContent = modulTitel;
+document.getElementById("kurs-title").textContent = kursTitel;
 
 // Popup öffnen
 function openCancelPopup() {
