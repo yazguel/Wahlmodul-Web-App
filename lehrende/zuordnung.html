@@ -57,10 +57,16 @@
     <section class="content-card zuordnung-card">
 
       <!-- Buttons oben rechts -->
-      <div class="top-actions">
+       <div class="top-actions">
         <button class="secondary" onclick="goToPage('vorschau.html')">Vorschau</button>
-        <button class="save">Änderungen speichern</button>
+        <button class="save" onclick="showSavedMessage()">Änderungen speichern</button>
       </div>
+
+    <div class="save-container">
+      <span id="saveMessage" class="save-message">
+          ✓ Änderungen gespeichert
+      </span>
+    </div>
 
       <!-- Grauer Abschnittstitel -->
       <div class="section-title">Angebotstyp</div>
@@ -90,7 +96,11 @@
 
     <!-- Button unten rechts außerhalb der weißen Fläche -->
     <div class="page-bottom">
-      <button class="next-button" onclick="goToPage('beschreibung.html')">Weiter</button>
+      <button class="next-button"
+        onclick="nextFromZuordnung()">
+          Weiter
+      </button>
+      <!-- <button class="next-button" onclick="goToPage('beschreibung.html')">Weiter</button> -->
     </div>
 
   </main>

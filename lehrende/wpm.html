@@ -58,8 +58,14 @@
   <!-- Buttons oben rechts -->
   <div class="top-actions">
     <button class="secondary" onclick="goToPage('vorschau.html')">Vorschau</button>
-    <button class="save">Änderungen speichern</button>
+    <button class="save" onclick="showSavedMessage()">Änderungen speichern</button>
   </div>
+
+  <div class="save-container">
+      <span id="saveMessage" class="save-message">
+          ✓ Änderungen gespeichert
+      </span>
+    </div>
 
   <!-- MMI -->
   <div class="wpm-section">

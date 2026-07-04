@@ -176,6 +176,24 @@ small {
   font-weight: bold;
   border-radius: 4px;
 }
+ .save-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.save-message {
+    color: #2e7d32;
+    font-size: 14px;
+    font-weight: bold;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.save-message.show {
+    opacity: 1;
+}
 
 .secondary {
   background: #ddd;
