@@ -1,142 +1,142 @@
-<!-- 2.Seite -->
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angebot beschreiben</title>
+  <!-- 2.Seite -->
+  <!DOCTYPE html>
+  <html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angebot beschreiben</title>
 
-  <!-- Gemeinsames CSS für alle Seiten -->
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Gemeinsames CSS für alle Seiten -->
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- Eigenes CSS nur für Beschreibung-Seite -->
-  <link rel="stylesheet" href="css/beschreibung.css">
-</head>
-<body>
+    <!-- Eigenes CSS nur für Beschreibung-Seite -->
+    <link rel="stylesheet" href="css/beschreibung.css">
+  </head>
+  <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="brand">
-      <img src="../assets/logo/Hochschule_Düsseldorf_logo.png" alt="HSD Logo" class="logo">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="brand">
+        <img src="../assets/logo/Hochschule_Düsseldorf_logo.png" alt="HSD Logo" class="logo">
 
-      <h2>
-        Wahlpflichtmodule<br>
-        Anbieter Hub
-      </h2>
-    </div>
-
-    <div class="icons">
-      <img src="../assets/lehrende/Search.svg" alt="Suche" class="icon">
-      <img src="../assets/lehrende/User.svg" alt="Profil" class="icon">
-      <img src="../assets/lehrende/Settings.svg" alt="Einstellungen" class="icon">
-    </div>
-  </header>
-
-  <main class="wrapper">
-
-    <!-- TITEL -->
-    <section class="title-box">
-      <h1>Angebot beschreiben</h1>
-    </section>
-
-    <!-- SCHRITTE -->
-    <nav class="steps">
-      <button class="step" onclick="goToPage('zuordnung.html')">Zuordnung</button>
-      <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
-      <button class="step active">Beschreibung</button>
-      <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
-      <button class="step" onclick="goToPage('wpm.html')">Wahlpflichtmodule</button>
-      <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
-      <button class="step" onclick="goToPage('orga.html')">Organisation</button>
-      <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
-      <button class="step" onclick="goToPage('vorschau.html')">Vorschau</button>
-    </nav>
-
-    <!-- INHALT -->
-    <section class="content-card">
-
-      <!-- Buttons oben rechts -->
-      <div class="top-actions">
-        <button class="secondary" onclick="goToPage('vorschau.html')">Vorschau</button>
-        <button class="save" onclick="showSavedMessage()">Änderungen speichern</button>
+        <h2>
+          Wahlpflichtmodule<br>
+          Anbieter Hub
+        </h2>
       </div>
 
-      <div class="save-container">
-      <span id="saveMessage" class="save-message">
-          ✓ Änderungen gespeichert
-      </span>
+      <div class="icons">
+        <img src="../assets/lehrende/Search.svg" alt="Suche" class="icon">
+        <img src="../assets/lehrende/User.svg" alt="Profil" class="icon">
+        <img src="../assets/lehrende/Settings.svg" alt="Einstellungen" class="icon">
       </div>
+    </header>
+
+    <main class="wrapper">
+
+      <!-- TITEL -->
+      <section class="title-box">
+        <h1>Angebot beschreiben</h1>
+      </section>
+
+      <!-- SCHRITTE -->
+      <nav class="steps">
+        <button class="step" onclick="goToPage('zuordnung.html')">Zuordnung</button>
+        <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
+        <button class="step active">Beschreibung</button>
+        <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
+        <button class="step" onclick="goToPage('wpm.html')">Wahlpflichtmodule</button>
+        <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
+        <button class="step" onclick="goToPage('orga.html')">Organisation</button>
+        <img src="../assets/lehrende/arrow.svg" alt="Pfeil">
+        <button class="step" onclick="goToPage('vorschau.html')">Vorschau</button>
+      </nav>
+
+      <!-- INHALT -->
+      <section class="content-card">
+
+        <!-- Buttons oben rechts -->
+        <div class="top-actions">
+          <button class="secondary" onclick="goToPage('vorschau.html')">Vorschau</button>
+          <button class="save" onclick="showSavedMessage()">Änderungen speichern</button>
+        </div>
+
+        <div class="save-container">
+        <span id="saveMessage" class="save-message">
+            ✓ Änderungen gespeichert
+        </span>
+        </div>
+        
+
+        <!-- Bereich Titel -->
+        <div class="section-title">Titel</div>
+
+        <label for="projektname">Vollständiger Projektname</label>
+        <input id="projektname" class="input" type="text">
+
+        <label class="checkbox-row">
+          <input type="checkbox">
+          Ein abgekürzter Name wird in Listen und der Navigation angezeigt.
+        </label>
+
+        <label for="zeugnistitel">Zeugnistitel</label>
+        <input id="zeugnistitel" class="input" type="text">
       
+        <div class="two-columns">
+          <div> <br>
+            <label for="pruefer">Prüfer*in</label>
+            <select id="pruefer">
+              <option>Prof. Dr.-Ing. M.Sc. Markus Dahm</option>
+              <option>Prof. Dr. Jennifer Rose</option>
+            </select>
+          </div>
 
-      <!-- Bereich Titel -->
-      <div class="section-title">Titel</div>
-
-      <label for="projektname">Vollständiger Projektname</label>
-      <input id="projektname" class="input" type="text">
-
-      <label class="checkbox-row">
-        <input type="checkbox">
-        Ein abgekürzter Name wird in Listen und der Navigation angezeigt.
-      </label>
-
-      <label for="zeugnistitel">Zeugnistitel</label>
-      <input id="zeugnistitel" class="input" type="text">
-     
-      <div class="two-columns">
-        <div> <br>
-          <label for="pruefer">Prüfer*in</label>
-          <select id="pruefer">
-            <option>Prof. Dr.-Ing. M.Sc. Markus Dahm</option>
-            <option>Prof. Dr. Jennifer Rose</option>
-          </select>
+          <div> <br>
+            <label for="betreuer">Weitere Betreuer*innen oder Teams</label>
+            <input id="betreuer" class="input" type="text">
+            <small>Bitte nur eintragen, wenn die gewünschte Person nicht in der Liste angezeigt wird.
+              <br> Bei mehrereren Namen bitte mit Komma voneinander trennen.</small>
+          </div>
         </div>
 
-        <div> <br>
-          <label for="betreuer">Weitere Betreuer*innen oder Teams</label>
-          <input id="betreuer" class="input" type="text">
-          <small>Bitte nur eintragen, wenn die gewünschte Person nicht in der Liste angezeigt wird.
-            <br> Bei mehrereren Namen bitte mit Komma voneinander trennen.</small>
+        <!-- Bereich Bild -->
+        <div class="section-title">Bild</div>
+
+        <div class="two-columns">
+          <div>
+            <label for="bild">Bild auswählen</label>
+            <input id="bild" class="input" type="file">
+            <small>Erlaubt sind PNG, JPEG, GIF und WebP. Das Bild wird zu 300x200px skaliert dargestellt.</small>
+          </div>
+
+          <div>
+            <label for="bildtext">Bildunterschrift</label>
+            <input id="bildtext" class="input" type="text">
+            <small>Optional, z. B. für Quellenangaben.</small>
+          </div>
         </div>
-      </div>
 
-      <!-- Bereich Bild -->
-      <div class="section-title">Bild</div>
+        <!-- Bereich Beschreibungen -->
+        <div class="section-title">Beschreibungen</div>
 
-      <div class="two-columns">
-        <div>
-          <label for="bild">Bild auswählen</label>
-          <input id="bild" class="input" type="file">
-          <small>Erlaubt sind PNG, JPEG, GIF und WebP. Das Bild wird zu 300x200px skaliert dargestellt.</small>
+        <label for="kurz">Kurz-Beschreibung</label>
+        <small>Wird in der Angebotsansicht immer angezeigt</small> <br>
+        <textarea id="kurz" placeholder="Rich text editor."></textarea>
+        <label for="lang">Lang-Beschreibung</label>
+        <small>Wird in der Angebotsansicht nach dem Ausklappen angezeigt</small> <br>
+        <textarea id="lang" class="large-textarea" placeholder="Rich text editor."></textarea>
+
+        <!-- Buttons unten -->
+        <div class="bottom-actions">
+          <button class="secondary" onclick="goToPage('zuordnung.html')">Zurück</button>
+          <button class="save">Änderungen speichern</button>
+          <button class="next-button" onclick="goToPage('wpm.html')">Weiter</button>
         </div>
 
-        <div>
-          <label for="bildtext">Bildunterschrift</label>
-          <input id="bildtext" class="input" type="text">
-          <small>Optional, z. B. für Quellenangaben.</small>
-        </div>
-      </div>
+      </section>
+    </main>
 
-      <!-- Bereich Beschreibungen -->
-      <div class="section-title">Beschreibungen</div>
-
-      <label for="kurz">Kurz-Beschreibung</label>
-      <small>Wird in der Angebotsansicht immer angezeigt</small> <br>
-      <textarea id="kurz" placeholder="Rich text editor."></textarea>
-      <label for="lang">Lang-Beschreibung</label>
-      <small>Wird in der Angebotsansicht nach dem Ausklappen angezeigt</small> <br>
-      <textarea id="lang" class="large-textarea" placeholder="Rich text editor."></textarea>
-
-      <!-- Buttons unten -->
-      <div class="bottom-actions">
-        <button class="secondary" onclick="goToPage('zuordnung.html')">Zurück</button>
-        <button class="save">Änderungen speichern</button>
-        <button class="next-button" onclick="goToPage('wpm.html')">Weiter</button>
-      </div>
-
-    </section>
-  </main>
-
-  <!-- JavaScript für Navigation -->
-  <script src="js/navigation.js"></script>
-</body>
-</html>
+    <!-- JavaScript für Navigation -->
+    <script src="js/navigation.js"></script>
+  </body>
+  </html>
