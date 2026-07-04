@@ -72,36 +72,35 @@
       <div class="section-title">Titel</div>
 
       <!-- Manuelle Eingabe -->
-      <label class="radio-option">
-          <input type="radio" name="titelart">
-          Kursname manuell eintragen
+     <label class="radio-option">
+          <input type="radio" name="titelart" id="manuell">
+          <span>Kursname manuell eintragen</span>
       </label>
+      <input type="text" placeholder="Bitte NUR den Klartext-Namen ohne Modulnummer eintragen (z.B. 'Interaktive Systeme')" class="input input-subtext">
 
        <!-- Modulhandbuch -->
       <label class="radio-option">
           <input
               type="radio"
               name="titelart"
+              id="handbuch"
               checked>
 
-          Kursname aus Modulhandbuch auswählen
+          Kursname aus Modulhandbücher aussuchen
       </label>
 
-      <div class="title-search">
-
-        <input
-            type="text"
-            placeholder="Modul suchen...">
-
-        <button class="search-button">
-             <img src="../assets/lehrende/Search.svg" alt="Suche" class="icon">
-        </button>
-
-        <input
-            type="text"
-            placeholder="Angezeigter Kursname">
-
-       </div>
+      <div class="two-columns title-row">
+        <div class="search-container">
+          <input type="text" placeholder="Modul suchen..." class="input search-input">
+          <button class="search-inside-button">
+            <img src="../assets/lehrende/Search.svg" alt="Suche" class="icon">
+          </button>
+        </div>
+        <div>
+          <label class="inline-label">angezeigter Kursname</label>
+          <input type="text" class="input">
+        </div>
+      </div>
 
       <label class="checkbox-row">
         <input type="checkbox">
@@ -159,7 +158,7 @@
       <div class="bottom-actions">
         <button class="secondary" onclick="goToPage('zuordnung.html')">Zurück</button>
         <button class="save">Änderungen speichern</button>
-        <button class="next-button" onclick="goToPage('wpm.html')">Weiter</button>
+        <button class="next-button" onclick="goToPage('wpm_klv.html')">Weiter</button>
       </div>
 
     </section>

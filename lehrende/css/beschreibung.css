@@ -15,3 +15,60 @@
 body {
   overflow-y: auto;
 }
+
+/* KLV  */
+/* Radio & Checkbox Styling für konsistenten Text-Align */
+.radio-option, .checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.radio-option input[type="radio"], 
+.checkbox-row input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: #e2001a;
+}
+
+/* Inline Labels über den Spalten */
+.inline-label {
+  color: #333;
+  margin-top: -16px;
+}
+
+/* Container für die Lupe IM Suchfeld */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding-right: 40px;
+}
+
+.search-inside-button {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-inside-button .icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+}
+
+
+
+
+
