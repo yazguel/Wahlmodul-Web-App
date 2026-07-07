@@ -15,7 +15,7 @@ document.getElementById("modul-title").textContent = kursDaten[modul].titel;
 // Kursliste-Container
 const list = document.querySelector(".course-list");
 
-// CHIP-FILTER statt Checkboxen
+// CHIP-FILTER 
 const chipContainer = document.querySelector(".tag-chips");
 
 // Chips klickbar machen

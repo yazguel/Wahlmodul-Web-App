@@ -18,7 +18,7 @@ if (editIndex !== null) {
     document.getElementById("motivation").value = alteBewerbung.motivation;
 
 } else {
-    // Neue Bewerbung → Kurs aus kursDaten laden
+    // Neue Bewerbung -> Kurs aus kursDaten laden
     const kurs = kursDaten[modul].kurse[kursIndex];
     kursTitel = kurs.name;
 }
@@ -43,10 +43,10 @@ function cancelYes() {
     const editIndex = params.get("edit");
 
     if (editIndex !== null) {
-        // Abbruch aus „Überarbeiten“ → zurück zu Meine Bewerbungen
+        // Abbruch aus „Überarbeiten“ -> zurück zu Meine Bewerbungen
         window.location.href = "meinebewerbungen.html";
     } else {
-        // normaler Abbruch → zurück zur Modulauswahl
+        // normaler Abbruch -> zurück zur Modulauswahl
         window.location.href = `modulwahl.html?modul=${modul}`;
     }
 }
