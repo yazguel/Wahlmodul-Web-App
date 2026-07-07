@@ -286,8 +286,11 @@ function renderApplications() {
 
          li.querySelector('.change-btn').addEventListener('click', (e) => {
             e.stopPropagation();
+			
             if (confirm("Zurück zum Formular, um das Motivationsschreiben zu ändern.")) {
-                renderApplications();
+				bewerbungenList.splice(index, 1);
+				renderApplications();
+				editExistingElement(app);
             }
         });
 
@@ -326,6 +329,19 @@ function renderApplications_addSubcategory() {
 		appsDragList.appendChild(myEleLi);
 	});
 }
+
+
+function editExistingElement(bewerbungenListElement) {
+	let target_catalog = bewerbungenListElement.catalog;
+	document.querySelector(`[data-catalog="${target_catalog}"]`).click();
+	
+	let target_kurs = bewerbungenListElement.course;
+	document.querySelector(`[data-course="${target_kurs}"]`).click();
+	
+	switchTab('bewerben');
+	tabContentBewerben.getElementsByTagName('textarea')[0].value = bewerbungenListElement.letter;
+}
+
 
 // Drag & Drop Logik
 let dragSrcEl = null;
