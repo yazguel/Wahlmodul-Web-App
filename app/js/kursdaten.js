@@ -500,7 +500,7 @@ const kursDaten = {
         ]
     },
 
-    ac: {
+    va: {
         titel: "Vertiefung A/C",
         kurse: [
             {
@@ -653,7 +653,7 @@ const kursDaten = {
         ]
     },
 
-    bc: {
+    vb: {
         titel: "Vertiefung B/C",
         kurse: [
             {

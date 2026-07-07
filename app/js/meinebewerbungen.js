@@ -75,9 +75,9 @@ function updateOrder(modul, liste) {
 
 // Überarbeiten
 function editBewerbung(modul, index) {
-    const kurs = bewerbungen[modul][index].kurs;
-    window.location.href = `bewerben.html?modul=${modul}&kursName=${encodeURIComponent(kurs)}`;
+    window.location.href = `bewerben.html?modul=${modul}&edit=${index}`;
 }
+
 
 // Löschen
 function deleteBewerbung(modul, index) {

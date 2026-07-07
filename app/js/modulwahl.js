@@ -1,3 +1,10 @@
+let gespeicherteBewerbungen = JSON.parse(localStorage.getItem("bewerbungen")) || {
+    ip: [],
+    mp: [],
+    va: [],
+    vb: []
+};
+
 // URL Parameter auslesen
 const params = new URLSearchParams(window.location.search);
 const modul = params.get("modul");
@@ -37,34 +44,44 @@ function renderKurse() {
             return kurs.tags.some(tag => checkedTags.includes(tag));
         })
         .forEach((kurs, kursIndex) => {
+            const bereitsBeworben = gespeicherteBewerbungen[modul]
+                .some(b => b.kurs === kurs.name);
 
             const card = document.createElement("div");
             card.classList.add("course-card", "dropdown");
             card.onclick = () => toggleDropdown(card);
 
             card.innerHTML = `
-                <img src="${kurs.bild}" class="course-img">
 
-                <div class="tags">
-                    ${kurs.tags.map(t => `<span>${t}</span>`).join("")}
+            <img src="${kurs.bild}" class="course-img">
+
+            <div class="tags">
+                ${kurs.tags.map(t => `<span>${t}</span>`).join("")}
+            </div>
+
+            <h2>${kurs.name}</h2>
+
+            <div class="dropdown-content">
+                <div class="beschreibung-lang">
+                    ${kurs.beschreibungLang.replace(/\n/g, "<br>")}
                 </div>
 
-                <h2>${kurs.name}</h2>
-
-                <div class="dropdown-content">
-                    <div class="beschreibung-lang">
-                        ${kurs.beschreibungLang.replace(/\n/g, "<br>")}
-                    </div>
-
-                    <button class="apply-btn"
+                ${bereitsBeworben
+                    ? `<button class="apply-btn disabled-btn" disabled>Bereits beworben</button>`
+                    : `<button class="apply-btn"
                         onclick="event.stopPropagation(); goTo('bewerben.html?modul=${modul}&kurs=${kursIndex}')">
                         Bewerben
-                    </button>
-                </div>
+                    </button>`
+                }
+            </div>
             `;
 
+
+
+
             list.appendChild(card);
-        });
+        }
+        );
 }
 
 // Beim Laden direkt rendern

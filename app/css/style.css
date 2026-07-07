@@ -1,3 +1,4 @@
+/* Allgemein*/
 /* Grundlayout */
 body {
     margin: 0;
@@ -73,6 +74,8 @@ body {
     color: #666;
 }
 
+
+/* Home */
 /* Course List */
 .course-list {
     padding: 0 16px;
@@ -96,6 +99,7 @@ body {
     color: #666;
 }
 
+/* Modulwahl */
 /* Filter Chips */
 .tag-chips {
     display: flex;
@@ -192,7 +196,7 @@ body {
     border-radius: 8px;
     font-size: 16px;
 }
-
+/* bewerben */
 /* Bewerbungscreen */
 .bewerben-header {
     text-align: center;
@@ -238,14 +242,7 @@ body {
     margin-top: 16px;
     gap: 10px;
 }
-.autosave-btn {
-    flex: 1;
-    background: #eee;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 14px;
-}
+
 .cancel-btn {
     flex: 1;
     background: #ddd;
@@ -264,7 +261,7 @@ body {
     font-size: 14px;
 }
 
-/* Popup */
+/* Popup Abbrechen */
 .popup.hidden {
     display: none;
 }
@@ -374,33 +371,54 @@ body {
 }
 
 /* Footer Buttons */
-.bewerbung-footer {
-    padding: 16px;
-    display: flex;
-    gap: 10px;
+.bewerbung-footer{
+    display:flex;
+    gap:16px;
+
+    padding:20px 16px 30px;
+}
+
+.bewerbung-footer button{
+
+    flex:1;
+
+    height:64px;
+
+    border-radius:16px;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
 }
 
 /* Speichern */
-.save-btn {
-    flex: 1;
-    background: white;
-    border: 2px solid #c00;
-    color: #c00;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
+.save-btn{
+
+    background:white;
+
+    color:#c00;
+
+    border:2px solid #c00;
 }
 
-/* Zu den Modulen */
-.back-btn {
-    flex: 1;
-    background: #c00;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
+/* Abbrechen */
+.footer-btn{
+
+    background:#c00;
+
+    color:white;
+
+    border:none;
+}
+
+.disabled-btn {
+    background: #ccc !important;
+    color: #666 !important;
+    cursor: not-allowed !important;
+}
+
+.course-card.disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
