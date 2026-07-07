@@ -40,6 +40,3 @@ Lehrende werden bei der Erstellung von Angeboten unterstützt.
 | Anh N. | Recherche Lehrendenprozess | Lehrende Web-App |
 | Yazgül K. | Recherche Lehrendenprozess | Lehrende Web-App |
 
-## Screenshots
-
-(Bilder einfügen)
