@@ -7,6 +7,7 @@ const editIndex = params.get("edit");
 // Kursdaten laden
 let kursTitel;
 
+// Wird bestehende Bewerbung bearbeitet?
 if (editIndex !== null) {
     // Bewerbung aus localStorage laden
     const bewerbungen = JSON.parse(localStorage.getItem("bewerbungen"));
@@ -52,10 +53,12 @@ function cancelYes() {
 }
 
 
-// Fertig
+// Fertige Bewerbung speichern/aktualisiern
 function finishApplication() {
+    // Motivation aus Textfeld auslesen
     const motivation = document.getElementById("motivation").value;
 
+    // Bereits gespeicherte Bewerbungen aus localStorage laden
     let bewerbungen = JSON.parse(localStorage.getItem("bewerbungen")) || {
         ip: [],
         mp: [],
@@ -77,6 +80,7 @@ function finishApplication() {
         });
     }
 
+    // Änderung speichern
     localStorage.setItem("bewerbungen", JSON.stringify(bewerbungen));
 
     window.location.href = "meinebewerbungen.html";

@@ -11,7 +11,7 @@ function goTo(url) {
 }
 
 
-// Kategorien rendern
+// Für jede Modulkategorie die Bewerbungen rendern
 document.querySelectorAll(".bewerbung-kategorie").forEach(kat => {
     const modul = kat.dataset.modul;
     const liste = kat.querySelector(".bewerbung-liste");
@@ -19,6 +19,7 @@ document.querySelectorAll(".bewerbung-kategorie").forEach(kat => {
     bewerbungen[modul].forEach((b, index) => {
         const item = document.createElement("div");
         item.classList.add("bewerbung-item");
+        // Drag & Drop aktivieren
         item.draggable = true;
         item.dataset.index = index;
 
@@ -57,6 +58,7 @@ document.querySelectorAll(".bewerbung-kategorie").forEach(kat => {
 });
 
 // Drag-Helfer
+// Gibt das Element zurück, über dem das gezogene Element gerade ist
 function getDragAfterElement(container, y) {
     const items = [...container.querySelectorAll(".bewerbung-item:not(.dragging)")];
     return items.find(item => {

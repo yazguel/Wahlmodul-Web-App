@@ -19,9 +19,10 @@ body {
     text-align: center;
     cursor: pointer;
     margin-top: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     transition: background 0.2s ease;
 }
+
 .start-btn:hover {
     background: #a00;
 }
@@ -35,9 +36,11 @@ body {
     background: white;
     border-bottom: 1px solid #ddd;
 }
+
 .logo {
     height: 28px;
 }
+
 .icon {
     height: 24px;
     margin-left: 12px;
@@ -49,6 +52,7 @@ body {
     justify-content: center;
     margin: 16px 0;
 }
+
 .progress-step {
     width: 28px;
     height: 6px;
@@ -56,6 +60,7 @@ body {
     border-radius: 4px;
     margin: 0 4px;
 }
+
 .progress-step.active {
     background: #c00;
 }
@@ -65,10 +70,12 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
+
 .page-title h1 {
     margin: 0;
     font-size: 20px;
 }
+
 .page-title p {
     margin: 4px 0 0;
     color: #666;
@@ -87,13 +94,15 @@ body {
     padding: 16px;
     border-radius: 12px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     overflow: visible;
 }
+
 .course-card h2 {
     margin: 0 0 6px;
     font-size: 18px;
 }
+
 .course-card p {
     margin: 0 0 12px;
     color: #666;
@@ -108,6 +117,7 @@ body {
     padding: 0 16px;
     margin-bottom: 12px;
 }
+
 .tag-chips span {
     padding: 4px 10px;
     background: #e5e5e5;
@@ -117,6 +127,7 @@ body {
     transition: 0.2s;
     user-select: none;
 }
+
 .tag-chips span.active {
     background: #c00;
     color: white;
@@ -129,6 +140,7 @@ body {
     gap: 6px;
     margin-bottom: 10px;
 }
+
 .tags span {
     background: #f0f0f0;
     padding: 5px 10px;
@@ -154,12 +166,14 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .dropdown-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
     padding: 0;
 }
+
 .dropdown.open .dropdown-content {
     max-height: 2000px;
     margin-top: 12px;
@@ -196,17 +210,20 @@ body {
     border-radius: 8px;
     font-size: 16px;
 }
+
 /* bewerben */
 /* Bewerbungscreen */
 .bewerben-header {
     text-align: center;
     margin: 20px 0;
 }
+
 .bewerben-header h1 {
     font-size: 22px;
     margin: 0;
     font-weight: bold;
 }
+
 .bewerben-header h2 {
     font-size: 18px;
     margin: 6px 0 0;
@@ -217,22 +234,26 @@ body {
 .bewerbung-container {
     padding: 0 16px;
 }
+
 .motivation-label {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 8px;
     display: block;
 }
+
 .motivation-box {
+    box-sizing: border-box;
     width: 100%;
-    height: 200px;
-    padding: 12px;
-    border-radius: 12px;
+    min-height: 220px;
+    padding: 16px;
+    border-radius: 20px;
     border: 1px solid #ccc;
     background: #fafafa;
-    font-size: 14px;
-    resize: none;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 /* Bewerbungsbuttons */
@@ -251,6 +272,7 @@ body {
     border-radius: 8px;
     font-size: 14px;
 }
+
 .finish-btn {
     flex: 1;
     background: #c00;
@@ -265,17 +287,19 @@ body {
 .popup.hidden {
     display: none;
 }
+
 .popup {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .popup-box {
     background: white;
     padding: 20px;
@@ -283,11 +307,13 @@ body {
     width: 80%;
     text-align: center;
 }
+
 .popup-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
 }
+
 .popup-buttons button {
     width: 45%;
     padding: 10px;
@@ -295,10 +321,12 @@ body {
     border-radius: 8px;
     font-size: 16px;
 }
+
 .popup-buttons button:first-child {
     background: #c00;
     color: white;
 }
+
 .popup-buttons button:last-child {
     background: #ddd;
 }
@@ -314,11 +342,10 @@ body {
     padding: 16px;
     border-radius: 12px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     cursor: pointer;
 }
 
-/* verhindert Klick-Block durch h2 */
 .bewerbung-kategorie h2 {
     margin: 0 0 12px;
     color: #c00;
@@ -330,7 +357,8 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    display: block; /* WICHTIG */
+    display: block;
+    
 }
 
 /* Liste geöffnet */
@@ -349,6 +377,7 @@ body {
     align-items: center;
     cursor: grab;
 }
+
 .bewerbung-item span {
     font-size: 15px;
 }
@@ -362,54 +391,56 @@ body {
     font-size: 13px;
     pointer-events: auto;
 }
+
 .bewerbung-actions .edit-btn {
     background: #ddd;
 }
+
 .bewerbung-actions .delete-btn {
     background: #c00;
     color: white;
 }
 
 /* Footer Buttons */
-.bewerbung-footer{
-    display:flex;
-    gap:16px;
+.bewerbung-footer {
+    display: flex;
+    gap: 16px;
 
-    padding:20px 16px 30px;
+    padding: 20px 16px 30px;
 }
 
-.bewerbung-footer button{
+.bewerbung-footer button {
 
-    flex:1;
+    flex: 1;
 
-    height:64px;
+    height: 64px;
 
-    border-radius:16px;
+    border-radius: 16px;
 
-    font-size:16px;
-    font-weight:bold;
+    font-size: 16px;
+    font-weight: bold;
 
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /* Speichern */
-.save-btn{
+.save-btn {
 
-    background:white;
+    background: white;
 
-    color:#c00;
+    color: #c00;
 
-    border:2px solid #c00;
+    border: 2px solid #c00;
 }
 
 /* Abbrechen */
-.footer-btn{
+.footer-btn {
 
-    background:#c00;
+    background: #c00;
 
-    color:white;
+    color: white;
 
-    border:none;
+    border: none;
 }
 
 .disabled-btn {

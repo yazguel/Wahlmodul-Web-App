@@ -1,3 +1,6 @@
+// Alle gespeicherten Bewerbungen aus localStorage laden
+// Kurse mit Bewerbungen ausgrauen bzw. später deaktivieren
+
 let gespeicherteBewerbungen = JSON.parse(localStorage.getItem("bewerbungen")) || {
     ip: [],
     mp: [],
@@ -39,11 +42,13 @@ function renderKurse() {
     const checkedTags = getSelectedTags();
 
     kursDaten[modul].kurse
+        // Nur Kurse anzeigen, die mindestens einen der ausgewählten Tags haben
         .filter(kurs => {
             if (checkedTags.length === 0) return true;
             return kurs.tags.some(tag => checkedTags.includes(tag));
         })
         .forEach((kurs, kursIndex) => {
+            // gibts schon eine Bewerbung für diesen Kurs?2
             const bereitsBeworben = gespeicherteBewerbungen[modul]
                 .some(b => b.kurs === kurs.name);
 
@@ -69,6 +74,7 @@ function renderKurse() {
                 ${bereitsBeworben
                     ? `<button class="apply-btn disabled-btn" disabled>Bereits beworben</button>`
                     : `<button class="apply-btn"
+                        <!-- stopPropagation verhindert, dass das Dropdown geschlossen wird -->
                         onclick="event.stopPropagation(); goTo('bewerben.html?modul=${modul}&kurs=${kursIndex}')">
                         Bewerben
                     </button>`
