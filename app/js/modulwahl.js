@@ -74,7 +74,6 @@ function renderKurse() {
                 ${bereitsBeworben
                     ? `<button class="apply-btn disabled-btn" disabled>Bereits beworben</button>`
                     : `<button class="apply-btn"
-                        <!-- stopPropagation verhindert, dass das Dropdown geschlossen wird -->
                         onclick="event.stopPropagation(); goTo('bewerben.html?modul=${modul}&kurs=${kursIndex}')">
                         Bewerben
                     </button>`
