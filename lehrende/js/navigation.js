@@ -50,3 +50,13 @@ function showSavedMessage() {
         message.classList.remove("show");
     }, 3000);
 }
+
+function showShortenedName() {
+  const name = document.getElementById("shortenedName");
+
+  if (document.getElementById("shortenedNameCheckbox").checked) {
+    name.style.visibility = "visible";
+  } else if (!document.getElementById("shortenedNameCheckbox").checked) {
+    name.style.visibility = "collapse";
+  }
+}

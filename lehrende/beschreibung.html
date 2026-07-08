@@ -75,9 +75,11 @@
         <input id="projektname" class="input" type="text">
 
         <label class="checkbox-row">
-          <input type="checkbox">
+          <input type="checkbox" id="shortenedNameCheckbox" onclick="showShortenedName()">
           Ein abgekürzter Name wird in Listen und der Navigation angezeigt.
         </label>
+        
+        <input id="shortenedName" class="input" type="text" style="visibility:collapse">
 
         <label for="zeugnistitel">Zeugnistitel</label>
         <input id="zeugnistitel" class="input" type="text">

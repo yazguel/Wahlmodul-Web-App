@@ -104,6 +104,8 @@ body {
   background: white;
   padding: 34px;
   margin-bottom: 60px;
+  display:flex;
+  flex-direction: column;
 }
 
 button {
